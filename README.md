@@ -1,3 +1,18 @@
+# MAIN CHANGES
+
+Changed the code for export-chatgpt-console.js to handle my use-case. If you have a ridiculous amount of conversations (1000+) to export, this could help.
+Refer to the fork here: https://gist.github.com/eileenthg/af15b92fcf73cf75fc9a6bbb14ff766e
+
+Improvements:
+- Increased delay time between fetches to avoid "Error 429: Too many requests"
+- If fetch failed, retry until succeed. Up to 20 attempts. Delay time increases exponentially between attempts.
+- Verbose logging in console (successful attempts and giving up)
+- Batch download. My computer froze during ZIP export due to system memory overwrite errors, causing my computer to hang, reboot, and making me lose all my progress. My modification will export a ZIP for every approx 200 conversations.
+- List of failed chat exports (ID and conversation title) at the end in console for manual exporting.
+Note: This will take very long, about a whole day for me. You'll need to be patient. Also, it does not automate fixing file export issues.
+
+========================================================================================================================================
+
 # ChatGPT Conversation Exporter
 
 Export all your ChatGPT conversations as **JSON + Markdown + HTML + ZIP**.
