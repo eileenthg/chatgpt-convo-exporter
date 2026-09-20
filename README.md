@@ -11,7 +11,7 @@ Improvements:
 - List of failed chat exports (ID and conversation title) at the end in console for manual exporting.
 Note: This will take very long, about a whole day for me. You'll need to be patient. Also, it does not automate fixing file export issues.
 
-========================================================================================================================================
+---
 
 # ChatGPT Conversation Exporter
 
